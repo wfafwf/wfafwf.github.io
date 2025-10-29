@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>给宝贝的18岁生日祝福</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FF6B8B',
+            secondary: '#A77DC2',
+            accent: '#FFD166',
+            light: '#FFF5F7',
+            dark: '#5A3D5C'
+          },
+          fontFamily: {
+            cute: ['"Comic Sans MS"', '"Marker Felt"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* 基础样式 */
+    .text-shadow { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); }
+    .animate-float { animation: float 6s ease-in-out infinite; }
+    .animate-pulse-slow { animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+    .bg-gradient-love { background: linear-gradient(135deg, #FF6B8B 0%, #A77DC2 100%); }
+    .card-hover { transition: all 0.3s ease; }
+    .card-hover:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+
+    /* 粉色爱心飘落动画 */
+    @keyframes heartFall {
+      0% {
+        top: -50px;
+        opacity: 0.8;
+        transform: rotate(0deg) scale(0.9);
+      }
+      100% {
+        top: 100vh;
+        opacity: 0.2;
+        transform: rotate(720deg) scale(1.1);
+      }
+    }
+
+    /* 转盘旋转音效视觉提示 */
+    @keyframes spinIndicator {
+      0% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.8; }
+    }
+
+    /* 其他动画 */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.8; }
+    }
+  </style>
+</head>
+<body class="bg-light font-cute text-dark overflow-x-hidden">
+  <!-- 粉色爱心容器：覆盖整个页面空白区域 -->
+  <div id="heart-container" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- 顶部装饰 -->
+  <div class="fixed top-0 left-0 w-full h-20 overflow-hidden pointer-events-none z-50">
+    <div class="absolute top-0 left-[10%] w-10 h-10 bg-accent rounded-full animate-float" style="animation-delay: 0s;"></div>
+    <div class="absolute top-0 left-[30%] w-6 h-6 bg-primary rounded-full animate-float" style="animation-delay: 1s;"></div>
+    <div class="absolute top-0 left-[50%] w-8 h-8 bg-secondary rounded-full animate-float" style="animation-delay: 0.5s;"></div>
+    <div class="absolute top-0 left-[70%] w-7 h-7 bg-accent rounded-full animate-float" style="animation-delay: 1.5s;"></div>
+    <div class="absolute top-0 left-[90%] w-5 h-5 bg-primary rounded-full animate-float" style="animation-delay: 0.8s;"></div>
+  </div>
+
+  <!-- 主要内容 -->
+  <main class="container mx-auto px-4 py-24 relative z-10">
+    <!-- 标题部分 -->
+    <section class="text-center mb-16">
+      <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold text-primary mb-4 text-shadow animate-pulse-slow">
+        生日快乐，我的宝贝！
+      </h1>
+      <p class="text-[clamp(1.2rem,3vw,1.8rem)] text-secondary">
+        恭喜你迎来了超棒的18岁！
+      </p>
+      <div class="mt-8 flex justify-center">
+        <div class="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-love flex items-center justify-center">
+          <span class="text-white text-4xl md:text-5xl font-bold">18</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 祝福内容 -->
+    <section class="max-w-2xl mx-auto mb-20 bg-white rounded-2xl shadow-xl p-8 md:p-10 transform transition-all duration-300 hover:shadow-2xl">
+      <div class="space-y-6 text-lg leading-relaxed">
+        <p>亲爱的宝贝，</p>
+
+        <p>今天是个特别的日子——你18岁啦！🎉 感觉昨天才认识你，转眼间你就从一个可爱的小姑娘变成了亭亭玉立的成年少女。看着你慢慢长大，真的特别开心能参与你这么重要的人生阶段。每次想起和你一起的小事，不管是一起躲雨的屋檐，还是分享过的一杯奶茶，都觉得心里暖暖的，这些都是我超珍贵的回忆。</p>
+
+        <p>18岁是人生中一个超酷的里程碑，意味着你正式踏入了成年人的世界，会有更多的自由，也会有更多精彩的冒险在等着你！不过别担心，不管你多大，在我心里永远是那个需要被宠爱的小公主，我都会一直站在你身边，做你最靠谱的“后盾”。</p>
+
+        <!-- 想和你一起做的事 -->
+        <div class="bg-light p-6 rounded-xl border-l-4 border-primary">
+          <h4 class="text-xl font-bold text-primary mb-3">18岁之后，想和你一起做的事还有好多好多：</h4>
+          <ul class="space-y-2 list-disc list-inside text-dark/90">
+            <li>今年春节跨年，想和你一起守在电视机前，倒数完一起说“新年快乐”，再吃一口热乎的饺子</li>
+            <li>等春天花开，想带你去公园拍好多好看的照片，把你和樱花一起装进我的相册里</li>
+            <li>夏天要一起去吃冰西瓜、逛夜市，再手牵手去看一场露天电影</li>
+            <li>秋天陪你去捡枫叶，一起窝在沙发上看一部长长的剧，分享同一份零食</li>
+            <li>还有好多好多日常，想每天和你一起吃饭、散步，哪怕只是坐着聊聊天，都觉得特别幸福</li>
+          </ul>
+        </div>
+
+        <!-- 补充祝福+包容期待 -->
+        <p>18岁这一年，你会遇到更多新鲜事，可能会有小迷茫，也会有超开心的瞬间。不管什么时候，我都想做你第一个分享的人——开心时陪你一起蹦蹦跳跳，难过时把肩膀借你靠，就算只是安静待着，只要身边是你，就觉得特别安心。</p>
+        <p>其实我知道自己有时候不太会说话，可能哪句话没注意就惹你不开心了，也常常笨手笨脚没做好你期待的事。但我真的在很努力学着怎么更好地对你，也特别感谢你一直以来的包容和体谅。未来我想慢慢改，把话说到你心里，把事做到你在意的地方，不让你再因为我的“嘴笨”受委屈。</p>
+
+        <!-- 长期陪伴决心 -->
+        <p>谢谢你出现在我的生命里，带给我那么多快乐和温暖。跟你在一起的每一天都像拆礼物一样让人期待，你的笑容比任何阳光都要灿烂。</p>
+        <p class="text-primary font-bold text-xl text-center mt-4">我想认真告诉你，喜欢你从不是一时的冲动，而是和你相处的每一刻，都让我更想把这份感情长久地走下去。我不敢说永远，但我能保证，每一个当下我都真心待你；我也不敢说自己完美，但我会把你放在优先级最高的位置，学着更懂你、更疼你。</p>
+        <p class="text-primary font-bold text-lg text-center mt-2">以后的日子，不管是18岁、28岁，还是更久以后，我都想牵着你的手，一起过柴米油盐的日常，一起看山川湖海的风景，一起把平淡的日子过成我们喜欢的样子。就算偶尔有小吵架、小别扭，也希望我们能好好沟通，不冷战、不敷衍，因为我真的不想错过你，更不想失去你。</p>
+
+        <!-- 专属细节补充 -->
+        <p class="text-primary font-bold text-xl text-center mt-8">18岁的你，是宇宙限量版的可爱！以后你的每一个小愿望，我都想帮你慢慢实现，就像你给我的温暖一样，把你的日子也填得满满当当的。</p>
+        <p class="text-primary font-bold text-xl text-center mt-2">爱你哟，不止今天，而是每一天！❤️</p>
+      </div>
+    </section>
+
+    <!-- 抽奖引导文案 -->
+    <section class="max-w-2xl mx-auto mb-12 text-center">
+      <div class="bg-accent/20 p-6 rounded-2xl">
+        <h2 class="text-2xl md:text-3xl font-bold text-primary mb-2 animate-pulse-slow">
+          <i class="fa fa-gift mr-2"></i>现在是抽奖礼物时间！
+        </h2>
+        <p class="text-lg text-dark/80">
+          准备好开启你的专属惊喜了吗？点击下方按钮，试试今天的好运气吧～
+        </p>
+      </div>
+    </section>
+
+    <!-- 抽奖部分 -->
+    <section class="max-w-2xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden">
+      <div class="bg-gradient-love p-6 text-center">
+        <h2 class="text-2xl md:text-3xl text-white font-bold">生日惊喜抽奖</h2>
+        <p class="text-white/90 mt-2">试试手气，看看你能抽中什么礼物吧！</p>
+      </div>
+
+      <div class="p-8">
+        <div class="mb-8">
+          <h3 class="text-xl text-primary font-bold mb-4">惊喜奖项：</h3>
+          <ul class="space-y-2 text-sm md:text-base">
+            <li class="flex items-center"><i class="fa fa-gift text-accent mr-2"></i> 随机礼物一个</li>
+            <li class="flex items-center"><i class="fa fa-star text-accent mr-2"></i> 你最想要的那件礼物</li>
+            <li class="flex items-center"><i class="fa fa-money text-accent mr-2"></i> 300元红包</li>
+            <li class="flex items-center"><i class="fa fa-envelope text-accent mr-2"></i> 1000元惊喜红包</li>
+          </ul>
+        </div>
+
+        <div class="text-center">
+          <!-- 转盘容器 -->
+          <div id="lottery-wheel" class="w-64 h-64 md:w-80 md:h-80 mx-auto mb-6 relative">
+            <!-- 转盘底座阴影（增加真实感） -->
+            <div class="absolute inset-0 rounded-full bg-primary/20 transform scale-105 blur-md -z-10"></div>
+
+            <!-- 转盘指示器（带物理反馈） -->
+            <div id="pointer" class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 w-10 h-10 bg-accent rounded-b-full shadow-lg flex items-center justify-center transition-transform duration-300">
+              <i class="fa fa-arrow-down text-white text-xl"></i>
+            </div>
+
+            <!-- 转盘（可旋转，带纹理） -->
+            <div id="wheel" class="w-full h-full rounded-full bg-gradient-love overflow-hidden transform transition-all duration-0 ease-linear" style="background-image: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 60%);">
+              <!-- 转盘中心装饰 -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-16 h-16 rounded-full bg-primary shadow-lg z-10 flex items-center justify-center">
+                  <i class="fa fa-gift text-white text-2xl"></i>
+                </div>
+              </div>
+
+              <div class="absolute inset-0">
+                <!-- 四个奖项区域（增加分隔线） -->
+                <div class="absolute inset-0" style="clip-path: polygon(50% 50%, 100% 0, 100% 100%); background: rgba(255,255,255,0.2);"></div>
+                <div class="absolute inset-0" style="clip-path: polygon(50% 50%, 0 0, 100% 0); background: rgba(255,255,255,0.3);"></div>
+                <div class="absolute inset-0" style="clip-path: polygon(50% 50%, 0 0, 0 100%); background: rgba(255,255,255,0.4);"></div>
+                <div class="absolute inset-0" style="clip-path: polygon(50% 50%, 0 100%, 100% 100%); background: rgba(255,255,255,0.5);"></div>
+
+                <!-- 分隔线 -->
+                <div class="absolute top-0 left-1/2 w-1 h-full bg-white/30 transform -translate-x-1/2"></div>
+                <div class="absolute top-1/2 left-0 w-full h-1 bg-white/30 transform -translate-y-1/2"></div>
+
+                <!-- 奖项文字（优化位置和旋转） -->
+                <div class="absolute top-[15%] left-1/2 transform -translate-x-1/2 text-white font-bold">随机礼物</div>
+                <div class="absolute right-[15%] top-1/2 transform -translate-y-1/2 text-white font-bold">心仪礼物</div>
+                <div class="absolute bottom-[15%] left-1/2 transform -translate-x-1/2 text-white font-bold">300元</div>
+                <div class="absolute left-[15%] top-1/2 transform -translate-y-1/2 text-white font-bold">1000元</div>
+              </div>
+            </div>
+          </div>
+
+          <button id="draw-btn" class="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-primary/50">
+            点击抽奖
+          </button>
+        </div>
+
+        <!-- 抽奖结果 -->
+        <div id="result" class="mt-8 text-center hidden">
+          <div class="p-6 rounded-xl bg-light border-2 border-primary/30 animate-float">
+            <h3 id="result-title" class="text-2xl font-bold text-primary mb-2"></h3>
+            <p id="result-desc" class="text-lg"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="mt-20 py-8 bg-gradient-love text-white text-center">
+    <p>永远爱你的男朋友 ❤️</p>
+    <p class="mt-2 text-sm opacity-80">祝我的宝贝18岁生日快乐，未来的每一天都有我陪伴！</p>
+  </footer>
+
+  <!-- 爱心生成+抽奖完整功能代码 -->
+  <script>
+    window.onload = function() {
+      // 1. 爱心飘落功能
+      const container = document.getElementById('heart-container');
+      const heartColors = ['#FF9AAA', '#FF7A9A', '#FF6B8B', '#FF5A7A', '#FF4A6A'];
+
+      setInterval(() => {
+        const heart = document.createElement('div');
+        const leftPos = Math.random() * 100;
+        const size = Math.random() * 20 + 15;
+        const color = heartColors[Math.floor(Math.random() * heartColors.length)];
+        const fallTime = Math.random() * 8 + 6;
+
+        heart.style.cssText = `
+          position: absolute;
+          left: ${leftPos}%;
+          color: ${color};
+          font-size: ${size}px;
+          animation: heartFall ${fallTime}s linear forwards;
+          pointer-events: none;
+        `;
+        heart.innerText = '❤️';
+        container.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, fallTime * 1000);
+      }, 300);
+
+      // 2. 抽奖核心功能（真实物理效果版）
+      const drawBtn = document.getElementById('draw-btn');
+      const wheel = document.getElementById('wheel');
+      const pointer = document.getElementById('pointer');
+      const result = document.getElementById('result');
+      const resultTitle = document.getElementById('result-title');
+      const resultDesc = document.getElementById('result-desc');
+      let hasDrawn = false; // 防止重复抽奖
+      let currentRotation = 0; // 记录当前转盘旋转角度
+      let animationFrameId = null; // 用于请求动画帧
+
+      // 奖项配置
+      const prizes = [
+        {
+          name: "随机礼物一个",
+          probability: 13.3,
+          angleRange: [0, 90],
+          desc: "一份神秘惊喜等着你哦！请截图保存本页面，发给你的宝宝即可兑换礼物～"
+        },
+        {
+          name: "你最想要的那件礼物",
+          probability: 50,
+          angleRange: [90, 180],
+          desc: "就是你心心念念的那个，马上为你准备！请截图保存本页面，发给你的宝宝即可兑换礼物～"
+        },
+        {
+          name: "300元红包",
+          probability: 26.7,
+          angleRange: [180, 270],
+          desc: "零花钱到账，快去买买买！请截图保存本页面，发给你的宝宝即可兑换礼物～"
+        },
+        {
+          name: "1000元惊喜红包",
+          probability: 10,
+          angleRange: [270, 360],
+          desc: "超大惊喜！可以买个大礼物啦！请截图保存本页面，发给你的宝宝即可兑换礼物～"
+        }
+      ];
+
+      // 计算中奖结果
+      function getRandomPrize() {
+        const random = Math.random() * 100;
+        let cumulativeProbability = 0;
+
+        for (const prize of prizes) {
+          cumulativeProbability += prize.probability;
+          if (random < cumulativeProbability) {
+            return prize;
+          }
+        }
+        return prizes[0];
+      }
+
+      // 物理引擎模拟转盘旋转（核心优化）
+      function simulateSpin(selectedPrize) {
+        // 目标角度：10-15圈基础旋转 + 奖项角度
+        const targetRotation = currentRotation +
+                              360 * (10 + Math.random() * 5) +
+                              (selectedPrize.angleRange[0] + Math.random() * (selectedPrize.angleRange[1] - selectedPrize.angleRange[0]));
+
+        const startRotation = currentRotation;
+        const rotationDistance = targetRotation - startRotation;
+        const startTime = performance.now();
+        const duration = 8000 + Math.random() * 2000; // 总时长8-10秒
+
+        // 物理参数：初始速度快，逐渐减速（模拟摩擦力）
+        function easeOutCubic(t) {
+          return 1 - Math.pow(1 - t, 3);
+        }
+
+        function easeOutQuart(t) {
+          return 1 - Math.pow(1 - t, 4);
+        }
+
+        // 复合缓动函数：先加速后减速，最后阶段减速更明显
+        function customEasing(t) {
+          if (t < 0.2) {
+            // 加速阶段
+            return easeOutCubic(t / 0.2);
+          } else {
+            // 减速阶段 - 后期减速更明显
+            return 0.2 + 0.8 * easeOutQuart((t - 0.2) / 0.8);
+          }
+        }
+
+        // 旋转动画帧
+        function animate(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const easedProgress = customEasing(progress);
+
+          // 计算当前旋转角度
+          currentRotation = startRotation + rotationDistance * easedProgress;
+          wheel.style.transform = `rotate(${currentRotation}deg)`;
+
+          // 转盘快速旋转时，指示器有轻微震动（模拟物理碰撞）
+          if (progress < 0.7) {
+            const shake = (Math.random() - 0.5) * 3;
+            pointer.style.transform = `translate(-50%, -50%) rotate(${shake}deg)`;
+          } else {
+            pointer.style.transform = `translate(-50%, -50%) rotate(0deg)`;
+          }
+
+          // 未完成则继续请求动画帧
+          if (progress < 1) {
+            animationFrameId = requestAnimationFrame(animate);
+          } else {
+            // 动画结束，显示结果
+            showResult(selectedPrize);
+          }
+        }
+
+        // 开始动画
+        animationFrameId = requestAnimationFrame(animate);
+      }
+
+      // 显示抽奖结果
+      function showResult(prize) {
+        resultTitle.textContent = `恭喜你抽中：${prize.name}`;
+        resultDesc.textContent = prize.desc;
+        result.classList.remove('hidden');
+        drawBtn.textContent = "已抽奖";
+        drawBtn.classList.add('opacity-70', 'cursor-not-allowed');
+
+        // 结果显示时的轻微弹跳动画
+        const resultEl = result.querySelector('div');
+        resultEl.style.animation = 'none';
+        resultEl.offsetHeight; // 触发重绘
+        resultEl.style.animation = 'float 3s ease-in-out infinite';
+      }
+
+      // 抽奖按钮点击事件
+      drawBtn.addEventListener('click', () => {
+        if (hasDrawn) return;
+        hasDrawn = true;
+        drawBtn.disabled = true;
+        drawBtn.textContent = "抽奖中...";
+        result.classList.add('hidden');
+
+        // 先给按钮一个按压反馈
+        drawBtn.classList.add('scale-95');
+        setTimeout(() => {
+          drawBtn.classList.remove('scale-95');
+        }, 200);
+
+        // 获取随机奖项并开始旋转
+        const selectedPrize = getRandomPrize();
+        simulateSpin(selectedPrize);
+      });
+    };
+  </script>
+</body>
+</html>
